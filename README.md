@@ -21,21 +21,21 @@ The STMS is designed to support the management of various team sports. It curren
 The following functions are provided by the STMS:
 
 1. Create a Team record: Allows creating a new team for a specific sport.
-2. Set the current team: Sets the current team by providing the Team ID.
+2. Set the current team: Set the current team by providing the Team ID.
 3. Add a player to the current team: Adds a player to the currently selected team.
 4. Modify the position of a player in the current team: Updates the position of a player in the current team.
-5. Delete a player from the current team: Removes a player from the current team.
+5. Delete a player from the current team: Remove a player from the current team.
 6. Show the current team: Displays the information of the current team.
 7. Display all teams: Displays the information of all teams.
-8. Change the name of the current team: Updates the name of the current team.
-9. Undo last command: Reverts the last command executed.
-10. Redo the last undone command: Executes the last undone command.
+8. Change the name of the current team: Update the name of the current team.
+9. Undo command: Reverts the last command executed.
+10. Redo the undone command: Executes the last undone command.
 11. Show undo/redo list: Displays the list of executed commands that can be undone or redone.
 12. Exit System: Terminates the STMS.
 
 ## Design Principles
 
-The system design adheres to the following design principle:
+The system design adheres to the following design principles:
 
 - Open Closed Principle: The system design is open for extension but closed for modification. It allows for the addition of new features or team sports without modifying the existing classes.
 
@@ -55,9 +55,9 @@ The following assumptions are made for the STMS:
 
 1. The system is implemented as a console application.
 2. Team IDs are unique identifiers used to manage teams.
-3. Players within a team are identified by their id and are assumed to be unique.
+3. Players within a team are identified by their ID and are assumed to be unique.
 4. The scope of the system is focused on managing players within teams, and extensive functionalities like match schedules or statistics are not included.
-5. Ignore command case, and assume user input are all correct.
+5. Ignore the command case, and assume the user input is all correct.
 
 ## Application Design
 
@@ -65,4 +65,4 @@ The application design is detailed in the [Class Diagram](./class-diagram.png). 
 
 ## Testing
 
-A thorough automated test script are developed to ensure the proper functionality and correctness of the system. The test plan covers all the system functions, considering various scenarios and edge cases. The test cases are executed to validate the expected behavior of the system.
+A thorough automated test script is developed to ensure the proper functionality and correctness of the system. The test plan covers all the system functions, considering various scenarios and edge cases. The test cases are executed to validate the expected behaviour of the system.
