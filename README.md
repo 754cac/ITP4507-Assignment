@@ -11,7 +11,6 @@ This repository contains the implementation of the Sport Teams Management System
 - [Assumptions](#assumptions)
 - [Application Design](#application-design)
 - [Testing](#testing)
-- [Source Code](#source-code)
 
 ## Introduction
 
