@@ -38,7 +38,9 @@ public class ModifyPlayerPositionCommand implements Command {
     }
 
     public void execute() {
-
+        positionMap = classPosNamHM.get(currTeam[0].getClass());
+        positionNumMap = addPlayerPosChoice.get(currTeam[0].getClass());
+        positionNameMap = positionMap.get(positionNumMap);
         System.out.print("Please input player ID:-");
         playerID = sc.nextLine();
         playeresEnumeration = currTeam[0].getAllPlayers();
@@ -51,9 +53,6 @@ public class ModifyPlayerPositionCommand implements Command {
         }
         currTeam[0].updatePlayerPosition();
         position = Integer.parseInt(sc.nextLine());
-        positionMap = classPosNamHM.get(currTeam[0].getClass());
-        positionNumMap = addPlayerPosChoice.get(currTeam[0].getClass());
-        positionNameMap = positionMap.get(positionNumMap);
         for (Map.Entry<Integer, Player> entry : playerHashMap.entrySet()) {
             playerHolder = entry.getValue();
             if (position >= 1 && position <= 2 &&
@@ -74,6 +73,8 @@ public class ModifyPlayerPositionCommand implements Command {
 
     public void redo() {
         if (player != null) {
+            ct.savePlayer(player);
+            player.setPosition(position);
             currTeam[0].remove(playerHolder);
             currTeam[0].addPlayer(player);
         }

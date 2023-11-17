@@ -32,6 +32,7 @@ public class RenameTeamCommand implements Command {
 
     public void redo() {
         if (teamName != null) {
+            ct.saveMyTeam(currTeam[0]);
             currTeam[0].setName(teamName);
         }
     }
