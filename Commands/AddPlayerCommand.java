@@ -1,8 +1,10 @@
 package Commands;
+
 import java.util.HashMap;
 import java.util.Scanner;
 import Given.*;
 import Factorys.*;
+
 public class AddPlayerCommand implements Command {
     private Scanner sc;
     private String idName;
@@ -47,7 +49,7 @@ public class AddPlayerCommand implements Command {
 
     public void undo() {
         if (player != null) {
-            currTeam[0].remove(player);
+            // currTeam[0].remove(player);
             oldTeam.remove(player);
             if (!currTeam[0].getTeamID().equals(oldTeam.getTeamID())) {
                 System.out.println("The current team is changed to " + oldTeam.getTeamID() + " " + oldTeam.getName());
@@ -58,7 +60,11 @@ public class AddPlayerCommand implements Command {
 
     public void redo() {
         if (player != null) {
-            currTeam[0].addPlayer(player);
+            oldTeam.addPlayer(player);
+            if (!currTeam[0].getTeamID().equals(oldTeam.getTeamID())) {
+                System.out.println("The current team is changed to " + oldTeam.getTeamID() + " " + oldTeam.getName());
+            }
+            currTeam[0] = oldTeam;
         }
     }
 
