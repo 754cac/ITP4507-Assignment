@@ -13,23 +13,23 @@ public class ModifyPlayerPositionCommandFactory implements CommandFactory {
     private Team[] currTeam;
     private Stack<Command> undos;
     private Scanner sc;
-    private Caretaker tc;
+    private Caretaker ct;
     private HashMap<Class<?>, int[]> addPlayerPosChoice;
     private HashMap<Class<?>, HashMap<int[], String[]>> classPosNamHM;
 
-    public ModifyPlayerPositionCommandFactory(Team[] currTeam, Scanner sc, Caretaker tc, Stack<Command> undos,
+    public ModifyPlayerPositionCommandFactory(Team[] currTeam, Scanner sc, Caretaker ct, Stack<Command> undos,
             HashMap<Class<?>, int[]> addPlayerPosChoice,
             HashMap<Class<?>, HashMap<int[], String[]>> classPosNamHM) {
         this.currTeam = currTeam;
         this.sc = sc;
-        this.tc = tc;
+        this.ct = ct;
         this.undos = undos;
-        this.addPlayerPosChoice=addPlayerPosChoice;
-        this.classPosNamHM=classPosNamHM;
+        this.addPlayerPosChoice = addPlayerPosChoice;
+        this.classPosNamHM = classPosNamHM;
     }
 
     public Command createCommand() {
-        Command com = new ModifyPlayerPositionCommand(currTeam, sc, tc,addPlayerPosChoice,classPosNamHM);
+        Command com = new ModifyPlayerPositionCommand(currTeam, sc, ct, addPlayerPosChoice, classPosNamHM);
         undos.push(com);
         return com;
     }
