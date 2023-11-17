@@ -25,9 +25,12 @@ public class SetCurrentTeamCommand implements Command {
             if (t.getTeamID().equals(teamID)) {
                 newTeam = t;
                 currTeam[0] = t;
+                System.out.println("Changed current team to " + currTeam[0].getTeamID());
             }
         }
-        System.out.println("Changed current team to " + currTeam[0].getTeamID());
+        if (!currTeam[0].getTeamID().equals(teamID)) {
+            System.out.println("Team " + teamID + " is not found!!");
+        }
     }
 
     public void undo() {
