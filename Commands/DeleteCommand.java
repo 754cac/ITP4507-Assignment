@@ -40,7 +40,7 @@ public class DeleteCommand implements Command {
             if (playerID.equals(playerHolder.getPlayerID())) {
                 currTeam[0].remove(playerHolder);
                 iterator.remove(); // Remove the player from the map
-                System.out.println("Playere is deleted.");
+                System.out.println("Player is deleted.");
                 toString = "Delete player, " + playerID;
                 break; // Exit the loop after removing the player
             }
