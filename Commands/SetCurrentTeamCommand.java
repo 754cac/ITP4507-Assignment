@@ -44,5 +44,10 @@ public class SetCurrentTeamCommand implements Command {
         if (newTeam != null) {
             currTeam[0] = newTeam;
         }
+
+    }
+
+    public String toString() {
+        return null;
     }
 }

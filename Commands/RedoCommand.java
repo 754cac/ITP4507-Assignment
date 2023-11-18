@@ -1,4 +1,5 @@
 package Commands;
+
 import java.util.*;
 
 public class RedoCommand implements Command {
@@ -28,4 +29,7 @@ public class RedoCommand implements Command {
     public void redo() {
     }
 
+    public String toString() {
+        return null;
+    }
 }

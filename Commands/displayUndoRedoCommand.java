@@ -48,4 +48,8 @@ public class displayUndoRedoCommand implements Command {
 
     }
 
+    public String toString() {
+        return null;
+    }
+
 }

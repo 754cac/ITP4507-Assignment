@@ -28,4 +28,7 @@ public class DisplayAllTeamCommand implements Command {
     public void redo() {
     }
 
+    public String toString() {
+        return null;
+    }
 }

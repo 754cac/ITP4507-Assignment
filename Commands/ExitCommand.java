@@ -10,4 +10,8 @@ public class ExitCommand implements Command {
 
     public void redo() {
     }
+
+    public String toString() {
+        return null;
+    }
 }
