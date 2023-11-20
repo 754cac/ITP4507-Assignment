@@ -13,5 +13,6 @@ public class VolleyballTeam extends Team {
     }
 
     public void displayTeam() {
+        System.out.println("Volleyball Team " + getName() + " (" + getTeamID() + ")");
     }
 }

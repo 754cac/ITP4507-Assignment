@@ -10,18 +10,16 @@ public class DisplayTeamCommandFactory implements CommandFactory {
     private HashMap<Class<?>, HashMap<int[], String[]>> classPosNamHM;
     private Team[] currTeam;
     private HashMap<Class<?>, int[]> addPlayerPosChoice;
-    private HashMap<Class<?>, String> createTeamString;
 
     public DisplayTeamCommandFactory(Team[] currTeam, HashMap<Class<?>, HashMap<int[], String[]>> classPosNamHM,
-            HashMap<Class<?>, int[]> addPlayerPosChoice,HashMap<Class<?>, String> createTeamString) {
+            HashMap<Class<?>, int[]> addPlayerPosChoice) {
         this.currTeam = currTeam;
         this.classPosNamHM = classPosNamHM;
         this.addPlayerPosChoice = addPlayerPosChoice;
-        this.createTeamString=createTeamString;
     }
 
     public Command createCommand() {
-        Command com = new DisplayTeamCommand(currTeam, classPosNamHM, addPlayerPosChoice,createTeamString);
+        Command com = new DisplayTeamCommand(currTeam, classPosNamHM, addPlayerPosChoice);
         return com;
     }
 }

@@ -16,5 +16,6 @@ public class FootballTeam extends Team {
     }
 
     public void displayTeam() {
+        System.out.println("Football Team " + getName() + " (" + getTeamID() + ")");
     }
 }

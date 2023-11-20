@@ -76,7 +76,7 @@ public class Main {
                 new ModifyPlayerPositionCommandFactory(currTeam, sc, ct, undos, addPlayerPosChoice, classPosNamHM));
         cFactories.put("d", new DeleteCommandFactory(sc, currTeam, undos));
         cFactories.put("s",
-                new DisplayTeamCommandFactory(currTeam, classPosNamHM, addPlayerPosChoice, createTeamString));
+                new DisplayTeamCommandFactory(currTeam, classPosNamHM, addPlayerPosChoice));
         cFactories.put("p", new DisplayAllTeamCommandFactory(Teams));
         cFactories.put("t", new RenameTeamCommandFactory(sc, currTeam, undos, ct));
         cFactories.put("u", new UndoCommandFactory(undos, redos));
