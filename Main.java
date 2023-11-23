@@ -96,10 +96,11 @@ public class Main {
             // creating a team, adding players, modifying player positions, etc.
             // - The appropriate factory object is used to create the corresponding command
             // based on the user's input.
-            System.out.println("Please enter command [ c | g | a | m | d | s | p | t | u | r | l | x ] :-");
+            System.out.print("Please enter command [ c | g | a | m | d | s | p | t | u | r | l | x ] :-");
             command = sc.nextLine().toLowerCase().trim();
             switch (command) {
                 case "c":
+                    redos.clear();
                     com = cFactories.get("c").createCommand();
                     com.execute();
                     break;
@@ -108,14 +109,17 @@ public class Main {
                     com.execute();
                     break;
                 case "a":
+                    redos.clear();
                     com = cFactories.get("a").createCommand();
                     com.execute();
                     break;
                 case "m":
+                    redos.clear();
                     com = cFactories.get("m").createCommand();
                     com.execute();
                     break;
                 case "d":
+                    redos.clear();
                     com = cFactories.get("d").createCommand();
                     com.execute();
                     break;
@@ -128,6 +132,7 @@ public class Main {
                     com.execute();
                     break;
                 case "t":
+                    redos.clear();
                     com = cFactories.get("t").createCommand();
                     com.execute();
                     break;
