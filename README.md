@@ -8,8 +8,11 @@ This repository contains the implementation of the Sport Teams Management System
 - [System Functions](#system-functions)
 - [Design Principles](#design-principles)
 - [Design Patterns](#design-patterns)
-- [Assumptions](#assumptions)
+  - [Command Pattern](#command-pattern)
+  - [Factory Pattern](#factory-pattern)
+  - [Memento Pattern](#memento-pattern)
 - [Application Design](#application-design)
+- [Assumptions](#assumptions)
 - [Testing](#testing)
 
 ## Introduction
@@ -43,11 +46,29 @@ The system design adheres to the following design principles:
 
 The following design patterns are applied in the STMS:
 
-1. Command Pattern: The Command pattern is used to implement various system functions as individual commands. Each command encapsulates a particular action and can be executed, undone, or redone.
+### Command Pattern
+The Command pattern is used to implement various system functions as individual commands. Each command encapsulates a particular action and can be executed, undone, or redone.
+<p align="center">
+  <img src="./img/command_class_diagram.png" alt="Command Pattern Diagram" width="738">
+</p>
 
-2. Factory Pattern or Abstract Factory Pattern: The Factory or Abstract Factory pattern is used to create different types of Command objects and team/player objects. It enables the system to instantiate the appropriate objects based on the specific sport or team requirements.
+### Factory Pattern
+The Factory or Abstract Factory pattern is used to create different types of Command objects and team/player objects. It enables the system to instantiate the appropriate objects based on the specific sport or team requirements.
+<p align="center">
+  <img src="./img/factory_class_diagram.png" alt="Factory Pattern Diagram" width="738">
+</p>
 
-3. Memento Pattern: The Memento pattern is used to provide the undo and redo functionality for modifying a player's position and changing a team's name. It allows capturing and restoring the internal state of objects without exposing their implementation details.
+### Memento Pattern
+The Memento pattern is used to provide the undo and redo functionality for modifying a player's position and changing a team's name. It allows capturing and restoring the internal state of objects without exposing their implementation details.
+<p align="center">
+  <img src="./img/memento_class_diagram.png" alt="Memento Pattern Diagram" width="738">
+</p>
+
+## Application Design
+<p align="center">
+  <img src="./img/class_diagram.png" alt="Full Class Diagram" width="738">
+</p>
+The application design is detailed in the Class Diagram. It illustrates the relationships and interactions between the main classes, including `Team`, `VolleyballTeam`, `FootballTeam`, and `Player`. The class diagram represents the usage of the Command pattern, Factory/Abstract Factory pattern, and Memento pattern in the system.
 
 ## Assumptions
 
@@ -58,10 +79,6 @@ The following assumptions are made for the STMS:
 3. Players within a team are identified by their ID and are assumed to be unique.
 4. The scope of the system is focused on managing players within teams, and extensive functionalities like match schedules or statistics are not included.
 5. Ignore the command case, and assume the user input is all correct.
-
-## Application Design
-
-The application design is detailed in the [Class Diagram](./class-diagram.png). It illustrates the relationships and interactions between the main classes, including `Team`, `VolleyballTeam`, `FootballTeam`, and `Player`. The class diagram represents the usage of the Command pattern, Factory/Abstract Factory pattern, and Memento pattern in the system.
 
 ## Testing
 
